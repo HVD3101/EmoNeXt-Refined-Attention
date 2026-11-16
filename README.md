@@ -4,7 +4,7 @@ Cải tiến mô hình học sâu **EmoNeXt** (kết hợp ConvNeXt và Scaled D
 
 ---
 
-## 🚀 Điểm cải tiến chính so với code gốc tác giả
+Điểm cải tiến chính so với code gốc tác giả
 
 1. **Chuẩn hóa hệ số Scale Attention:** Sửa scale từ $d^{-1/4}$ thành $1/\sqrt{d}$ theo đúng chuẩn cơ chế Scaled Dot-Product Attention, ngăn hiện tượng triệt tiêu đạo hàm (vanishing gradients).
 2. **Bảo toàn chiều không gian (Spatial Dimensions):** Bỏ Global Average Pooling (GAP) sớm trong `forward_features` để giữ tensor dạng $(B, C, 7, 7)$, cho phép cơ chế Attention hoạt động trên 49 spatial tokens khuôn mặt (mắt, mũi, miệng) thay vì nhầm sang batch dimension.
@@ -19,7 +19,7 @@ Cải tiến mô hình học sâu **EmoNeXt** (kết hợp ConvNeXt và Scaled D
 
 ---
 
-## 📊 Kết quả thực nghiệm (FER2013)
+Kết quả thực nghiệm (FER2013)
 
 * **Validation Accuracy (Best):** **73.07%**
 * **Test Accuracy (Raw Model):** **71.82%**
@@ -36,7 +36,7 @@ Cải tiến mô hình học sâu **EmoNeXt** (kết hợp ConvNeXt và Scaled D
 
 ---
 
-## 💻 Cài đặt & Sử dụng
+Cài đặt & Sử dụng
 
 ### 1. Cài đặt thư viện
 ```bash
